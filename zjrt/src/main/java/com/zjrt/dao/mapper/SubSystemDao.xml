@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjrt.dao.SubSystemDao">
+    <select id="queryByCluster" resultType="com.zjrt.entity.SubSystemEntity">
+        SELECT * FROM subsystem
+        WHERE systemid = #{systemid}
+    </select>
+
+    <insert id="addSub">
+        INSERT INTO subsystem(subsystemname,subsystemfilepath,systemid,buttonid,type)
+        VALUES (#{subsystemname},#{subsystemfilepath},#{systemid},#{buttonid},#{type})
+    </insert>
+
+    <select id="queryByName" resultType="com.zjrt.entity.SubSystemEntity">
+        SELECT * FROM subsystem
+        WHERE  subsystemname = #{subsystemname} AND
+        systemid = #{systemid}
+    </select>
+
+    <update id="updateSub">
+        UPDATE subsystem SET subsystemfilepath = #{subsystemfilepath}
+        WHERE buttonid = #{buttonid}
+    </update>
+
+    <delete id="deleteById">
+        DELETE FROM subsystem WHERE subsystemid = #{subsystemid}
+    </delete>
+</mapper>

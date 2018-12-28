@@ -1,0 +1,651 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	background: rgb(230,230,230);
+}
+a{
+	color: rgb(255,255,255);
+	height: 100%;
+	margin: 0;
+}
+nav{
+	width: 100%;
+	min-width: 100%;
+	max-width: 100%;
+	margin-bottom: 0;
+	position: absolute;
+	top: 0;
+	z-index: 100;
+}
+li{
+	height: 100%;
+}
+span{
+	-moz-appearance:none;
+    -webkit-appearance:none;
+}
+::-webkit-scrollbar{
+	width: 0.5%;
+	height: 0.1%;
+}
+
+::-webkit-scrollbar-thumb{
+	width: 5px;
+	background: rgb(56,84,110);
+}
+.container-fluid{
+	background: rgba(53,64,83,0.8);
+	height: 67px;
+	width: 100%;
+	min-height:100%; 
+	margin-bottom: 0;
+}
+.navbar-header,.navbar-brand,.container_list,.navbar-nav{
+	height: 100%;
+	margin-bottom: 0;
+}
+.navbar-header{
+	width: 17.4%;
+	position: absolute;
+	left: 0;
+}
+.navbar-brand{
+	background: rgba(59,98,132,1);
+	margin: 0;
+	width: 100%;
+	padding: 15px 0;
+	margin: 0;
+}
+/*页面logo*/
+.logo_image{
+	background: rgba(59,98,132,0.5);
+	width: 137px;
+	height: 100%;
+	margin: 0 40px;
+}
+.logo_one{
+	margin-right: 20px;
+}
+/*页面头部导航栏*/
+.container_list{
+	width: 83.8%;
+	height: 100%;
+	position: absolute;
+	left: 16.3%;
+}
+/*头部导航栏左侧部分*/
+.sections{
+	width: 60%;
+	height: 100%;
+}
+/*每一个导航栏*/
+.content{
+	width: 30%;
+	text-align: center;
+	font-size: 24px;
+}
+/*修改导航栏内字体位置*/
+.content p{
+	padding-top: 10px;
+}
+/*当前页面导航栏里边字的颜色*/
+.current{
+	color: rgb(1,125,199);
+}
+/*右边退出登录和个人标签的位置*/
+.unload{
+	position: absolute;
+	width: 30%;
+	right: 0;
+}
+.unload li{
+	float: right;
+}
+.unload .content{
+	width: 50%;
+}
+/*下半部分主工作区*/
+.manager_main_page{
+	width: 100%;
+	height: 1080px;
+	min-height: 100%;
+	background: rgb(230,230,230);
+	position: absolute;
+	top: 67px;
+}
+/*带有左半部分目录样式*/
+.manager_main_page .navbar{
+	width: 16.3%;/*217px*/
+	height: 100%;
+	margin: 0;
+	text-align: center;
+	font-size: 18px;
+	border-radius: 0;
+	<!--border-top: 1px solid rgb(53,64,83);
+	border-bottom: 1px solid rgb(53,64,83);-->
+}
+.navbar-vertal{
+	width: 100%;
+	height: 100%;
+	background: rgb(53,64,83);
+}
+.navbar{
+	border: none;
+}
+.navbar-vertal p{
+	padding-top: 10px;
+}
+.navbar-vertal li{
+	height: 62px;
+}
+/*搜索框*/
+.input_search{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.input-group{margin-top: 10px;}
+.input-group input{
+	width: 180px;
+	height: 42px;
+	border: 2px solid rgb(57,93,123);
+	border-radius: 20px;
+	background-color: rgb(57,93,123);
+	color: rgb(255,255,255);
+	font-size: 16px;
+}
+.input-group-addon{
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+	background: rgba(57,93,123,1);
+	border: 1px solid rgb(57,93,123);
+}
+/*左半部分当前目录样式*/
+.current_content_active{
+	background: rgb(57,93,123);
+}
+/*webkit浏览器*/
+::-webkit-input-placeholder { color: rgb(255,255,255); }
+/*火狐浏览器*/
+::-moz-placeholder { color: rgb(255,255,255); }
+/*列表上的右箭头*/
+.bg_right_arrow{
+	height: 62px;
+	width: 17px;
+	position: absolute;
+	top: 0;
+	right: -0.5px;
+}
+.bg_right_arrow:hover{
+	background: rgb(1,125,199);
+	border-radius: 2px;
+}
+.right_arrow{
+	height: 62px;
+	width: 17px;
+	background-image: url(../images/youjiantou.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	position: absolute;
+	top: 0;
+	right: -0.5px;
+}
+.navbar-vertal p{
+	position: absolute;
+	text-align: center;
+	left: 18%;
+}
+.nav li a:hover{
+	background: rgb(57,93,123);
+	color: rgb(255,255,255);
+}
+/*管理员主工作区域（右侧）*/
+.manager_main_work{
+	margin: 0 auto;
+	width: 77%;
+	height: 1080px;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	left: 20%;
+}
+
+
+/*管理员维护列表*/
+.manager_main_work .mechine_list .list_content{
+	font-size: 20px;
+	width: 50%;
+}
+.manager_main_work .mechine_list .list_content a{
+	margin-right: 5%;
+}
+.manager_main_work .mechine_list .list_content .top{
+	color: rgb(85,85,85);
+}
+.manager_main_work .mechine_list .list_content .delete{
+	color: rgb(255,82,82);
+}
+/*维护经验管理的输入框*/
+.manager_main_work form{
+	color: rgb(84,84,84);
+	font-size: 22px;
+	width: 33%;
+	height: 7%;
+	position: absolute;
+	top: 2%;
+	right: 0;
+}
+/*维护经验管理添加按钮*/
+/*管理员页码和添加按钮*/
+.mechine_list .page{
+	width: 70%;
+	font-size: 20px;
+}
+.mechine_list .page input{
+	top: 15%;
+	height: 70%;
+	width: 6%;
+	left: 20%;
+	font-size: 20px;
+}
+.mechine_list .add_button{
+	position: absolute;
+	right: 0;
+	width: 18%;
+	height: 100%;
+	color: rgb(255,255,255);
+}
+.mechine_list .add_button button{
+	height: 100%;
+	width: 100%;
+	background: rgb(66,160,214);
+	border: 2px solid rgb(66,160,214);
+	font-size: 20px;
+	border-radius: 5px;
+}
+/*添加按钮遮罩层*/
+.modal-dialog{
+	height: 75%;
+	width: 55%;
+	position: absolute;
+	top: 8%;
+	left: 25%;
+}
+.modal-content{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+/*遮罩层输入框*/
+.modal-body{
+	width: 100%;
+	height: 76%;
+	position: absolute;
+	top: 6%;
+}
+.modal-body form{
+	position: absolute;
+	top: 0;
+	left: 5%;
+	width: 90%;
+	height: 100%;
+}
+/*input-groups只用于上传或修改经验页面*/
+.modal-body form .input-groups{
+	position: relative;
+	width: 100%;
+	height: 18%;
+}
+.modal-body form .input-groups p{
+	width: 15%;
+	height: 60%;
+	text-align: right;
+	font-size: 20px;
+	padding-top: 2%;
+}
+.modal-body form .input-groups input{
+	width: 40%;
+	height: 60%;
+	background: rgb(247,247,247);
+	border: 2px solid rgb(219,219,219);
+}
+.modal-body form .texta{
+	position: relative;
+	top: 2%;
+	width: 100%;
+	height: 26%;
+}
+.modal-body form .texta textarea{
+	position: absolute;
+	top: 5%;
+	left: 20%;
+	width: 50%;
+	height: 77%;
+	border: 2px solid rgb(219,219,219);
+	border-radius: 5px;
+	background: rgb(247,247,247);
+}
+/*管理员图片管理*/
+/*图片列表*/
+.pic_list{
+	position: absolute;
+	top: 3%;
+	width: 40%;
+	min-height: 50%; 
+	max-height: 100%;
+	background: rgb(255,255,255);
+	border: 2px solid rgb(204,204,204);
+	border-radius: 5px;
+}
+.pic_list_in{
+	height: 90%;
+	width: 100%;
+	border-bottom: 2px solid rgb(204,204,204);
+	position: absolute;
+	overflow: scroll;
+	display:inline-block !important; 
+	display:inline;
+}
+.pic_list ul{
+	position: absolute;
+	width: 100%;
+}
+.pic_list ul li{
+	list-style-type: none;
+	width: 100%;
+	height: auto;
+	border-bottom: 2px solid rgb(204,204,204);
+	text-align: left;
+	font-size: 20px;
+	padding-left: 3%;
+}
+.p_append{
+	width: 100%;
+}
+.pic_id{
+	position: relative;
+	width: 80%;
+}
+.pic_num_name{
+	width: 22%;
+	float: left;
+}
+/*删除图片*/
+.pic_delete{
+	position: absolute;
+	top: 91.5%;
+	left: 65%;
+	width: 25%;
+	height: 7%;
+}
+.pic_delete button{
+	width: 100%;
+	height: 100%;
+	background: rgb(66,160,214);
+	border: 1px solid rgb(66,160,214);
+}
+/*添加图片*/
+.pic_add{
+	position: absolute;
+	top: 4%;
+	left: 42.5%;
+	width: 10%;
+	height: 3.5%;
+}
+.pic_add button{
+	width: 100%;
+	height: 100%;
+	background: rgb(66,160,214);
+	border: 1px solid rgb(66,160,214);
+}
+/*图片展示*/
+.pic_show{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 3%;
+	left: 55%;
+	width: 45%;
+	height: 27%;
+	background: rgb(219,219,219);
+}
+.description{
+	position: absolute;
+	top: 32%;
+	left: 55%;
+	width: 45%;
+	height: 15%;
+	background: rgb(219,219,219);
+}
+.input_description{
+	width: 100%;
+	height: 100%;
+	border: none;
+	background: rgb(219,219,219);
+}
+/*确定图片*/
+.pic_confirm{
+	position: absolute;
+	top: 46%;
+	left: 90%;
+	width: 10%;
+	height: 3.5%;
+}
+.pic_confirm button{
+	width: 100%;
+	height: 100%;
+	background: rgb(66,160,214);
+	border: 1px solid rgb(66,160,214);
+}
+
+
+/*管理员设备文档管理*/
+.manager_main_work .main_page{
+	width: 100%;
+}
+.manager_main_work .main_page .list_content{
+	width: 20%;
+}
+/*只用于管理员设备文档管理*/
+.modal-body .form_only{
+	margin: 0 auto;
+	width: 80%;
+	height: 90%;
+	position: relative;
+}
+.form_only .input-groups_only{
+	position: relative;
+	top: 20%;
+	width: 100%;
+	height: 20%;
+	float: left;
+}
+.form_only .input-groups_only .list_title{
+	position: absolute;
+	width: 20%;
+	height: 100%;
+	text-align: left;
+}
+
+
+.form_only .input-groups_only p{
+	padding-top: 3%;
+}
+.form_only .input-groups_only input{
+	width: 60%;
+	height: 70%;
+}
+.form_only .input-groups_only button{
+	position: absolute;
+	top: 16%;
+	left: 85%;
+	height: 70%;
+	width: 15%;
+	background: rgb(247,247,247);
+	border: 2px solid rgb(219,219,219);
+	color: rgb(85,85,85);
+}
+.add_button_only{
+	position: absolute;
+	top: 6%;
+	left: -30%;
+	width: 15%;
+	height: 80%;
+}
+.add_button_only button{
+	width: 100%;
+	height: 100%;
+	background: rgb(66,160,214);
+	border: 1px solid rgb(66,160,214);
+}
+/*集群管理的浮出框*/
+.floater{
+	position: absolute;
+	top: 5%;
+	left: 16.3%;
+	width: 18%;
+	height: 50%;
+	background: rgb(51,84,110);
+}
+.pic_list_in{
+	overflow:-moz-scrollbars-none;
+
+}
+.floater .pic_list_in{
+	border: 0;
+}
+.floater .pic_list_in ul{
+	position: absolute;
+	top: 2%;
+	left: 5%;
+	height: 10%;
+	width: 90%;
+	border-top:2px solid rgb(147,163,174);
+	text-align: center;
+}
+.floater .pic_list_in ul li{
+	list-style-type: none;
+	position: relative;
+	height: 50px;
+	width: 100%;
+	font-size: 20px;
+	padding-top: 4%;
+	color: rgb(229,229,229);
+	border-bottom: 2px solid rgb(147,163,174);
+	text-align: center;
+}
+.add_delete{
+	position: absolute;
+	top: 90%;
+	z-index: 10;
+	width: 100%;
+	height: 10%;
+}
+.add{
+	position: absolute;
+	top: 20%;
+	left: 15%;
+	width: 40%;
+}
+.delete_01{
+	position: absolute;
+	top: 20%;
+	left: 55%;
+	width: 40%;
+}
+.add_delete button{
+	background: rgb(101,119,151);
+	border: 1px solid rgb(101,119,151);
+	border-radius: 20px;
+}
+/*添加系统*/
+.add_system .modal-dialog{
+	position: absolute;
+	top: 20%;
+	height: 40%;
+}
+.add_system .modal-dialog h3{
+	font-size: 20px;
+}
+.add_system .modal-dialog p{
+	font-size: 18px;
+}
+.add_system .modal-dialog .modal-footer{
+	bottom: 10%;
+	width: 100%;
+	height: 16%;
+}
+.add_system .modal-dialog button{
+	background: rgb(66,160,214);
+	color: rgb(255,255,255);
+	margin: 0 10% 0 10%;
+	border: 1px solid rgb(66,160,214);
+}
+.add_system .modal-dialog .add_button{
+	left: 15%;
+}
+.add_system .modal-dialog .delete{
+	left: 60%;
+}
+.add_system .modal-dialog form{
+	
+}
+.add_system .modal-dialog .input-groups_only{
+	position: absolute;
+	
+}
+.add_system .modal-dialog .input-groups_only h3{
+	position: absolute;
+	top: -60%;
+}
+.choice_PicName{
+	color:#42a0d6;
+}
+/**28号之后加的css*/
+.group_tow{
+	display: flex;
+	justify-content: space-between;
+}
+.group_tow_select .list_title{
+	float: left;
+	width: 20%;
+	height: 100%;
+	text-align: left;
+}
+.content_two{
+	 width: 50%;
+ }
+.pic_list_in_Li{
+	list-style-type: none;
+	position: relative;
+	height: 50px;
+	width: 100%;
+	font-size: 20px;
+	padding-top: 4%;
+	color: rgb(229,229,229);
+	border-bottom: 2px solid rgb(147,163,174);
+	text-align: center;
+}
+/*首页的信息遮罩层*/
+.title{
+	position: absolute;
+	top: 10%;
+	left: 20%;
+}
+.maintain_person{
+	position: absolute;
+	top: 15%;
+	left: 20%;
+}
+.matain_machine{
+	position: absolute;
+	top: 20%;
+	left: 20%;
+}
+
+

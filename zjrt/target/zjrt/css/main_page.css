@@ -1,0 +1,210 @@
+.main_page{
+	margin: 0 auto;
+	width: 100%;
+	height: 1080px;
+	min-height: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	background: rgb(230,230,230);
+}
+/*轮播图总区域*/
+#myCarousel{
+	min-height: 55.8%;
+	height: 55.8%;
+	width: 100%;
+	position: relative;
+	top: 0;
+	border: 1px solid rgb(230,230,230);
+}
+/*轮播项目*/
+.carousel-inner{
+	height: 77.9%;
+	width: 100%;
+	min-height: 77.9%;
+}
+/*轮播项目图片*/
+.carousel-inner .item img{
+	width: 100%;
+	height: 100%;
+}
+/*轮播指标*/
+.slide_dots{
+	width: 84.2%;
+	height: 21.4%;
+	background: rgba(255,255,255,0.8);
+	position: relative;
+	z-index: 10;
+	top: -4.7%;
+	left: 7.8%;
+	border-radius: 5px;
+	box-shadow: 10px 12px 20px rgb(209,209,209);
+	text-align: center;
+}
+/*轮播标题*/
+.titles{
+	position: relative;
+	top: 31%;
+}
+.titles p{
+	font-size: 0.3rem;
+}
+.current_title{
+	text-align: center;
+	font-family: "[PingFangSC]";
+	font-size: 23px;
+	display: none;
+}
+.num_1{
+	display: block;
+}
+.num_2,.num_3,.num_4,.num_5{
+	display: none;
+}
+/*所有dot位置*/
+.carousel-indicators{
+	position: relative;
+	top: 34%;
+}
+/*所有dot*/
+.carousel-indicators li{
+	height: 12px;
+	width: 12px;
+	background: rgb(3,128,186);
+	margin: 0 15px;
+	border: 1px solid rgb(3,128,186);
+	-webkit-transition: all .28s ease-in .1s;
+  	transition: all .28s ease-in .1s;
+  	-moz-transition: all .28s ease-in .1s;
+}
+/*当前dot形状*/
+.carousel-indicators .active{
+	height: 13px;
+	width: 36px;
+	background: rgb(3,128,186);
+}
+/*轮播导航（左右滑动）*/
+.carousel-control{
+	height: 77.9%;
+}
+/*设备维护*/
+.mechine_maintain{
+	position: relative;
+	left: 2%;
+	width: 96%;
+	height: 41.2%;
+	min-height: 41.2%;
+	background: rgb(255,255,255);
+	font-family: "[PingFangSC]";
+}
+/*维护和更多*/
+.title_more{
+	height: 7.3%;
+	width: 100%;
+	position: relative;
+	top: 6%;
+	left: 0;
+	font-size: 25px;
+	color: rgb(1,125,199);
+	text-align: center;
+}
+/*设备维护标题*/
+.mechine_maintain_title{
+	height: 100%;
+	width: 9.1%;
+	float: left;
+}
+.mechine_maintain_title img{
+	position: absolute;
+	left: 0;
+}
+.mechine_maintain_title span{
+	position: absolute;
+	left: 2%;
+}
+/*更多*/
+.more_information{
+	width: 4%;
+	height: 100%;
+	float: right;
+	margin-right: 3%;
+}
+.more_information a{
+	text-decoration: none;
+	color: rgb(1,125,199);
+}
+/*维护消息列表*/
+.matain_informations_list{
+	width: 94%;
+	height: 65.3%;
+	position: relative;
+	top: 9.5%;
+	left: 5%;
+	font-size: 23px;
+}
+.matain_informations_list ul{
+	height: 100%;
+	position: relative;
+	top: 5%;
+}
+.matain_informations_list ul li{
+	list-style-image: url(../images/guzhang.png);
+	color: rgb(1,125,199);
+	height: 20%;
+	width: 90%;
+	position: relative;
+}
+/*每一条维护消息*/
+.information a{
+	position: absolute;
+	top: 0;
+	left: 1%;
+	text-decoration: none;
+	height: 70%;
+	width: 80%;
+	display: block;
+}
+.information .time,.information .name{
+	color: rgb(1,125,199);
+}
+.information .main_inform{
+	color: rgb(75,75,75);
+}
+/*维护时间*/
+.matain_informations_list ul li .time{
+	height: 100%;
+	position: absolute;
+	left: 0;
+}
+/*维护人*/
+.matain_informations_list ul li .name{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 22%;
+}
+
+/*维护信息*/
+.matain_informations_list ul li .main_inform{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 37%;
+}
+/*重新设置新信息徽章样式*/
+.badge{
+	color: rgb(235,6,6);
+	border-radius: 0;
+	padding: 0;
+	height: 30px;
+	width: 47px;
+	font-size: 23px;
+	background: rgba(255,255,255,0);
+}
+.title_list li p{
+	display: none;
+}
+/*28号之后加的代码*/
+.none{
+	display: none;
+}

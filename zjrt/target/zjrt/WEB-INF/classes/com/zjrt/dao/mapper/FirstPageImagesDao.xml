@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjrt.dao.FirstPageImagesDao">
+    <select id="queryByAll" resultType="com.zjrt.entity.FirstPageImagesEntity">
+        SELECT * FROM firstpageImages
+    </select>
+
+    <delete id="deleteById">
+        DELETE FROM firstpageImages
+        WHERE imageid = #{imageid}
+    </delete>
+
+    <select id="queryById" resultType="com.zjrt.entity.FirstPageImagesEntity">
+        SELECT * FROM firstpageImages
+        WHERE
+        <if test="_parameter != null">
+        imageid = ${_parameter}
+        </if>
+    </select>
+
+    <insert id="addImage">
+        INSERT INTO firstpageImages(imagepath,description)
+        VALUES (#{imagepath},#{description})
+    </insert>
+
+
+
+</mapper>

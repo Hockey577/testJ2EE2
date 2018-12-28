@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>监看结构图</title>
+		<link href="css/picSet.css" rel="stylesheet">
+	</head>
+	<style>
+		.pic_box img{
+			position: relative;
+			width: 100%;
+			height: 100%;
+		}
+		.container_box{
+			position: absolute;
+			top: 57%;
+			left:17%;
+			bottom:-20%;
+			display: flex;
+			justify-content: space-between;
+			width: 70%;
+			height:13%;
+		}
+		.make{
+			width: 70%;
+			height: 100%;
+			text-align: center;
+			border-radius: 40px;
+			border: none;
+			font-size: 20px;
+			font-weight: 600;
+			color: #ffffff;
+			background-color: #37a8fd;
+		}
+		.make_container {
+			position: relative;
+			width: 50%;
+		}
+		.modifyLeft{
+			left:16%;
+			top: 72%;
+			width: 51%;
+		}
+
+		.modifyWidth{
+			width:40%;
+		}
+		.modifyTop{
+			width:32%;
+			height:33%;
+		}
+		.noLineTell{
+			width:15%;
+			height:32%;
+			position:absolute;
+			top:10%;
+			right:2%;
+			background:#37a8fd;
+		}
+		.noLineTell ul{
+			list-style: none;
+			padding:0;
+		}
+		.noLineTell ul li{
+			width:100%;
+			height:30px;
+			padding-top:5px;
+			margin-top:5px;
+		}
+		.noLineTell_text,.normalButton{
+			text-align:center;
+		}
+		.normalButton button{
+			width:60%;
+			text-align: center;
+			border:1px solid #c0c0c0;
+			font-size: 0.3rem;
+			font-weight: 600;
+			height:100%;
+			background:white;
+		}
+		.noLineTell_text{
+			font-size:24px;
+		}
+	</style>
+	<body>
+		<div class="pic_box">
+			<div class="bgPic">
+				<img src="http://106.14.210.170:8080/zjrt/upload/bc0bc202-a9e0-4d39-9ab6-26fd9cd780db.jpg">
+			</div>
+			<div class="container_box">
+				<div class="make_container" id="B">
+					<button class="make turnTo_pdf"  value="47cf689a-370f-40d0-8080-e3718ec97815.pdf">制作矩阵B</button>
+				</div>
+				<div class="make_container" id="A">
+					<button class="make turnTo_pdf"  value="5eb1d2fb-1ec6-4a20-814b-c58d4e6cb3f3.pdf">制作矩阵A</button>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>

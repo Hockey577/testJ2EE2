@@ -1,0 +1,141 @@
+/*管理员的首页*/
+.mechine_maintain_one{
+	position: relative;
+	left: 2%;
+	width: 60%;
+	height: 41.2%;
+	min-height: 41.2%;
+	background: rgb(255,255,255);
+	font-family: "[PingFangSC]";
+}
+.mechine_maintain_two{
+	position: absolute;
+	top: 55.8%;
+	left: 64%;
+	width: 34%;
+	height: 41.2%;
+	min-height: 41.2%;
+	background: rgb(255,255,255);
+	font-family: "微软雅黑";
+}
+/*维护和更多*/
+
+/*设备维护标题一*/
+.mechine_maintain_one .mechine_maintain_title{
+	height: 100%;
+	width: 19.1%;
+	position: relative;
+	left: 0;
+}
+.mechine_maintain_one .mechine_maintain_title img{
+	position: absolute;
+	left: 0;
+}
+.mechine_maintain_one .mechine_maintain_title span{
+	position: absolute;
+	left: 13%;
+}
+/*设备维护标题二*/
+.mechine_maintain_two .mechine_maintain_title{
+	height: 100%;
+	width: 29.1%;
+	position: relative;
+	left: 0;
+}
+.mechine_maintain_two .mechine_maintain_title img{
+	position: absolute;
+	left: 0;
+}
+.mechine_maintain_two .mechine_maintain_title span{
+	position: absolute;
+	left: 15%;
+}
+/*更多一*/
+.mechine_maintain_one .more_information{
+	width: 10%;
+	height: 100%;
+	float: right;
+	margin-right: 3%;
+}
+/*更多二*/
+.mechine_maintain_two .more_information{
+	width: 20%;
+	height: 100%;
+	float: right;
+	margin-right: 3%;
+}
+/*维护消息列表一*/
+.mechine_maintain_one .matain_informations_list{
+	width: 90%;
+	height: 65.3%;
+	position: relative;
+	top: 9.5%;
+	left: 5%;
+	font-size: 21px;
+}
+/*维护消息列表二*/
+.mechine_maintain_two .matain_informations_list{
+	width: 85%;
+	height: 65.3%;
+	position: relative;
+	top: 9.5%;
+	left: 10%;
+	font-size: 21px;
+}
+/*第一/二列表每一条维护消息*/
+.information a{
+	position: absolute;
+	top: 0;
+	left: 1%;
+	text-decoration: none;
+	height: 70%;
+	width: 80%;
+	display: block;
+	color: rgb(1,125,199);
+}
+.information .time,.information .name{
+	color: rgb(1,125,199);
+}
+.information .main_inform{
+	color: rgb(75,75,75);
+}
+/*第一/二列表维护时间*/
+.matain_informations_list ul li .time{
+	height: 100%;
+	position: absolute;
+	left: 0;
+}
+/*第一列表维护人*/
+.mechine_maintain_one .matain_informations_list ul li .name{
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 35%;
+}
+/*第一列表维护信息*/
+.mechine_maintain_one .matain_informations_list ul li .main_inform{
+	height: 100%;
+	width: 80%;
+	position: absolute;
+	top: 0;
+	left: 55%;
+}
+/*第二列表维护人*/
+.mechine_maintain_two .matain_informations_list ul li .name{
+	height: 100%;
+	width: 88%;
+	position: absolute;
+	top: 0;
+	left: 60%;
+}
+.mechine_maintain_two .matain_informations_list ul li .name01{
+	height: 100%;
+	width: 88%;
+	position: absolute;
+	top: 0;
+	left: 5%;
+	display: block;
+}
+.none{
+	display: none;
+}

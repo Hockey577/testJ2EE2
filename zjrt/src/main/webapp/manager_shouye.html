@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>首页</title>
+</head>
+	<link href="../zjrt/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="../zjrt/css/container.css" rel="stylesheet" >
+	<link rel="stylesheet" type="text/css" href="../zjrt/css/main_page.css"/>
+	<link rel="stylesheet" type="text/css" href="../zjrt/css/manager_mainpage.css"/>
+<body>
+	<nav>
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="manager_shouye.html">
+					<div class="logo_image">
+						<img class="logo_one" src="../zjrt/images/logo.png"/>
+						<img class="logo_two" src="../zjrt/images/logo－RTG.png"/>
+					</div>
+				</a>
+			</div>
+			<div class="container_list">
+				<ul class="nav navbar-nav sections">
+					<li class="content"><a class="current" href="manager_shouye.html" target="_blank"><p>首页</p></a></li>
+					<li class="content"><a href="manager_jiqunguanli.html" target="_blank"><p>集群展示</p></a></li>
+					<li class="content"><a href="manager_tupianguanli.html" target="_blank"><p>后台管理</p></a></li>
+				</ul>
+				<ul class="nav navbar-nav unload">
+					<li class="content"><a href="denglu.html"><p>退出登录</p></a></li>
+					<li><a href="javascript:;"><img src="../zjrt/images/管理员.png"/></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="main_page">
+		<div id="myCarousel" class="carousel slide"  data-ride="carousel" data-interval="3000">
+			<!-- 轮播（Carousel）项目 -->
+			<div class="carousel-inner">
+				<div class="item active">
+					<a href="#"><img src="" style="height: 471px;" alt="First slide"></a>
+				</div>
+				<div class="item">
+					<a href="#"><img src="" style="height: 471px;" alt="Second slide"></a>
+				</div>
+				<div class="item">
+					<a href="#"><img src="" style="height: 471px;" alt="Third slide"></a>
+				</div>
+				<div class="item">
+					<a href="#"><img src="" style="height: 471px;" alt="Fourth slide"></a>
+				</div>
+				<div class="item">
+					<a href="#"><img src="" style="height: 471px;" alt="Fifth slide"></a>
+				</div>
+			</div>
+			<!-- 轮播（Carousel）指标 -->
+			<div class="slide_dots">
+				<div class="titles">
+						<p></p>
+						<p class="none"></p>
+						<p class="none"></p>
+						<p class="none"></p>
+						<p class="none"></p>
+				</div>
+				<ol class="carousel-indicators">
+					<li data-target="#myCarousel" data-slide-to="0" class="point_one active"></li>
+					<li data-target="#myCarousel" data-slide-to="1" class="point_two"></li>
+					<li data-target="#myCarousel" data-slide-to="2" class="point_three"></li>
+					<li data-target="#myCarousel" data-slide-to="3" class="point_four"></li>
+					<li data-target="#myCarousel" data-slide-to="4" class="point_five"></li>
+				</ol>   
+			</div>
+			<!-- 轮播（Carousel）导航 -->
+			<a id="prev" class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+			<a id="next" class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+		</div> 
+		<div class="mechine_maintain_one">
+			<div class="title_more">
+				<div class="mechine_maintain_title">
+					<img src="../zjrt/images/shebeiweihu.png"/>
+					<span><b>设备维护</b></span>
+				</div>
+				<div class="more_information">
+					<a href="manager_weihujingyangaunli.html" target="_blank">更多</a>
+				</div>
+			</div>
+			<div class="matain_informations_list">
+				<ul id="mechine_list_ul">
+
+				</ul>
+				<div class="modal fade" id="myModal_01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-body">
+								<form action="" method="post">
+									<div class="input-groups">
+										<p >标题</p>
+										<input type="text" value="" class="title" id="modifyTitle"/>
+									</div>
+									<div class="input-groups">
+										<p>维护人</p>
+										<input type="text" value="" class="maintain_person" id="modifyUsername"/>
+									</div>
+									<div class="input-groups">
+										<p>设备名称</p>
+										<input type="text" value="" class="matain_machine" id="modifyDevicename"/>
+									</div>
+									<div class="input-groups texta">
+										<p>问题描述</p>
+										<textarea name="" rows="" cols="" id="modifyDescription"></textarea>
+
+									</div>
+									<div class="input-groups texta">
+										<p>解决方法</p>
+										<textarea name="" rows="" cols="" id="modifySolution"></textarea>
+
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div class="mechine_maintain_two">
+			<div class="title_more">
+				<div class="mechine_maintain_title">
+					<img src="../zjrt/images/shebeiweihu.png"/>
+					<span><b>设备文档</b></span>
+				</div>
+				<div class="more_information">
+					<a href="manager_shebeiwendangguanli.html" target="_blank">更多</a>
+				</div>
+			</div>
+			<div class="matain_informations_list">
+				<ul id="mechine_ul">
+
+				</ul>
+			</div>
+		</div>
+	</div>	
+</body>
+<script src="../zjrt/js/jquery-3.2.1.min.js" ></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../zjrt/js/JS_ClusterShowing.js"></script>
+<script>
+	var urlstring = "http://106.14.210.170:8080/zjrt/";
+var cache = [];//缓存池
+var picnum = 0;
+var page=1;
+getData();
+regetData();
+getSlideData();
+
+function getData(){
+		var datajson = {
+			"startRow":0,
+			"pageSize":200000
+		};
+	console.log(datajson);
+		$.ajax({
+			type: "post",
+			url: urlstring+"maintain/list",
+			contentType: "application/json",
+			dataType: "json",
+			data:JSON.stringify(datajson),
+			success: function (dataString) {
+				var dataList = dataString.data;
+				console.log(dataList);
+				renderData(dataList);
+				for(var i = dataList.length-1; i >= 0; i--){
+					var datalists = dataList[i].title + dataList[i].username +dataList[i].devicename +dataList[i].description +dataList[i].solution ;
+				}
+				cache=datalists;
+				console.log(cache);
+			},
+			error: function (XMLHttpRequest, textStatus, errorThrown) {
+				alert(XMLHttpRequest.status);
+				alert(XMLHttpRequest.readyState);
+				alert(textStatus);
+			}
+		});
+	}
+	//渲染数据（设备维护）
+	function renderData(dataList){
+		var telp = '';
+		var dataLong=dataList.length;
+		for(var i= dataLong-1,item;item=dataList[i--];){
+			if(i>=-1&&i>dataLong-8){
+				if(i>dataLong-5){
+					telp += `<li class="information" data-toggle="modal" data-target="#myModal_01">
+					<a href='#'onclick="reData(this)">
+						<p class="time">${item.addtime}</p>
+						<p class="name">${item.username}</p>
+						<p class="main_inform">${item.devicename}<span class="badge">[新]</span>
+						</p>
+					</a>
+					</li>`;
+				}
+				else{
+					telp += `<li class="information" data-toggle="modal" data-target="#myModal_01">
+					<a href='#'onclick="reData(this)">
+						<p class="time">${item.addtime}</p>
+						<p class="name">${item.username}</p>
+						<p class="main_inform">${item.devicename}</p>
+					</a>
+					</li>`;
+				}
+			}
+		}
+		$("#mechine_list_ul").html(telp);
+	}
+	
+	//设备文档
+	function regetData(){
+		var datajson = {
+    		"startRow":0,
+    		"pageSize":2000
+    		
+		};
+		$.ajax({
+			type: "post",
+			url: urlstring+"device/queryAll",
+			contentType: "application/json",
+			dataType: "json",
+			data:JSON.stringify(datajson),
+			success: function (dataString) {
+				var dataList = dataString.data;
+				console.log(dataList);
+				reRenderData(dataList);
+				cache=dataList;
+			},
+			error: function (XMLHttpRequest, textStatus, errorThrown) {
+				alert(XMLHttpRequest.status);
+				alert(XMLHttpRequest.readyState);
+				alert(textStatus);
+			}
+		});
+	}
+	//渲染数据(设备文档)
+	function reRenderData(dataList){
+		var telp = '';
+		var dataLong=dataList.length;
+		for(var i= dataLong-1,item;item=dataList[i--];){
+			if(i>=-1&&i>dataLong-8){
+				if(i>dataLong-5){
+					telp += `<li class="information">
+					<a href='#'>
+						<p class="name01">${item.devicename}
+							<span class="badge">[新]</span>
+						</p>
+					</a>
+					</li>`;
+				}
+				else{
+					telp += `<li class="information">
+					<a href='#'>
+						<p class="name01">${item.devicename}</p>
+					</a>
+					</li>`;
+				}
+			}
+			
+		}
+		$("#mechine_ul").html(telp);
+	}
+	
+
+	
+	
+function getSlideData() {
+    $.ajax({
+        type: "get",
+        url: urlstring + "images/list",
+        contentType: "application/json",
+        dataType: "json",
+        success: function (PicList) {//获取图片数据组
+            console.log(PicList);
+            var picList = PicList.data;
+            console.log(picList);
+            var picnames = "";//定义变量“图片名称”
+            var cache01 = [];//创建数组池
+            for(var i = picList.length-1; i >=0; i--){//最新的图片放在前面
+                picnames = picList[i].imageid+":"+picList[i].description;
+                console.log(picList[i].imageid+picList[i].imagepath);
+                cache01 = picList;
+                $(".titles").find("p").eq(i).text(picnames);
+            }
+            
+            var image_path = "http://106.14.210.170:8080/zjrt/upload/";
+            for(var i = picList.length-1; i >=0; i--){//最新的图片放在前面
+                var imageUrl =image_path+ picList[i].imagepath;
+                $(".carousel-inner").find("img").eq(i).attr("src",imageUrl);
+            }
+        },
+        error: function (XMLHttpRequest, textStatus, errorThrown) {
+            alert(XMLHttpRequest.status);
+            alert(XMLHttpRequest.readyState);
+            alert(textStatus);
+        }
+    });
+}
+
+	function reData(obj){
+		//console.log(cache[$(obj).parent().index()]);
+		var index=$(obj).parent().index();
+		//初始化修改表单
+		$("#modifyTitle").val(cache[index].title);
+		$("#modifyUsername").val(cache[index].username);
+		$("#modifyDevicename").val(cache[index].devicename);
+		$("#modifyDescription").val(cache[index].description);
+		$("#modifySolution").val(cache[index].solution);
+
+		$("#modifyButton").click(function(){
+			editData(index);
+		});
+	}
+</script>
+</html>

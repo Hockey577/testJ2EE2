@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjrt.dao.ClusterSystemDao">
+    <select id="queryAll" resultType="com.zjrt.entity.ClusterSystemEntity">
+        SELECT * FROM clusterSystem
+    </select>
+
+    <delete id="deleteById">
+        DELETE  FROM clusterSystem
+        WHERE  systemid = #{systemid}
+    </delete>
+
+    <insert id="addCluster">
+        INSERT INTO clusterSystem(systemname,systemhtmlpath)
+        VALUES (#{systemname},#{systemhtmlpath})
+    </insert>
+
+    <select id="queryAllName" resultType="com.zjrt.entity.ClusterSystemEntity">
+        SELECT systemid,systemname FROM clusterSystem
+    </select>
+</mapper>

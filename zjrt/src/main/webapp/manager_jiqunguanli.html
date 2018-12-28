@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>集群管理</title>
+</head>
+	<link href="../zjrt/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="../zjrt/css/container.css" rel="stylesheet" >
+	<link rel="stylesheet" type="text/css" href="../zjrt/css/file_menage.css"/>
+	<link href="../zjrt/css/style_ClusterShowing.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../zjrt/css/style_Painting.css"/>
+	<style>
+		.uploadFile{
+			top: 0.2rem;
+		}
+		.addPDF{
+			top: 0.2rem;
+		}
+	</style>
+<body>
+	<nav class="navbar nav-pills">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="manager_shouye.html">
+					<div class="logo_image">
+						<img class="logo_one" src="../zjrt/images/logo.png"/>
+						<img class="logo_two" src="../zjrt/images/logo－RTG.png"/>
+					</div>
+				</a>
+			</div>
+			<div class="container_list">
+				<ul class="nav navbar-nav sections">
+					<li class="content"><a href="manager_shouye.html"><p>首页</p></a></li>
+					<li class="content"><a href="manager_jiqunguanli.html"><p>集群展示</p></a></li>
+					<li class="content"><a class="current" href="manager_tupianguanli.html"><p>后台管理</p></a></li>
+				</ul>
+				<ul class="nav navbar-nav unload">
+					<li class="content"><a href="denglu.html"><p>退出登录</p></a></li>
+					<li><a href="yonghuzhongxin.html"><img src="../zjrt/images/管理员.png"/></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="manager_main_page">
+		<nav class="navbar" style="z-index: 0">
+			<div class="navbar navbar-vertal">
+				<ul class="nav">
+					<li>
+						<a href="manager_tupianguanli.html">
+						<p>首页图片管理</p>
+						<div class="bg_right_arrow">
+						</div>
+						</a>
+					</li>
+					<li class="current_content_active">
+						<a href="manager_jiqunguanli.html">
+						<p>演播厅集群管理</p>
+						<div class="bg_right_arrow">
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="manager_shebeiwendangguanli.html">
+							<p>设备文档管理</p>
+						</a>
+					</li>
+					<li>
+						<a href="manager_weihujingyangaunli.html">
+							<p>维护经验管理</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="floater">
+				<div class="pic_list_in">
+				<ul>
+				</ul>
+			</div>
+			<div class="add_delete">
+				<div class="add">
+					<button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModal" id="add_system">
+						添加
+					</button>
+				</div>
+				<div class="delete_01">
+					<button type="submit" class="btn btn-primary" id="delete_system">
+						删除
+					</button>
+				</div>
+			</div>
+			<div class="add_system">
+				<!--添加系统-->
+				<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-body">
+    							<p class="fileTitle">制作矩阵</p>
+    							<div class="choiceFile">
+                                    <!--以下修改了HTML-->
+                                    <form id="form_pdfFile" enctype="multipart/form-data">
+                                        <input type="file" class="uploadFile pdfFile" id="pdfFile">
+                                        <button class="addPDF">添加系统文件</button>
+                                    </form>
+                                    <!--以上修改了HTML-->
+    							</div>
+    							<div class="fileAndDelete">
+        							<p class="fileName showFile" id="pdfFile_name"></p>
+        							<button class="delete" id="delete">删除</button>
+    							</div>
+							</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-primary add_button" data-dismiss="modal" id="add_system_sure">
+									确定
+								</button>
+								<button type="button" class="btn btn-default delete" data-dismiss="modal">
+									取消
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="manager_main_work" style="width: 60%;right: -15%;">
+			<div class="bgPic">
+   				 	<img src="../zjrt/images/ClusterShowing.jpg">
+				</div>
+				<div class="MakeMatrix">
+    				<div class="make_container" id="B">
+        				<button class="make" data-toggle="modal" data-target="#myModal_01">制作矩阵B</button>
+        				<img  class="flag_shadow hide" id="B_flag" src="../zjrt/images/flagWithShadow.png">
+    				</div>
+    				<div class="add_system">
+    				<!--添加矩阵-->
+						<div class="modal fade" id="myModal_01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-body">
+    							<p class="fileTitle">制作矩阵</p>
+    							<div class="choiceFile">
+        							<input type="file" class="uploadFile pdfFile" id="pdfFileB">
+        							<button class="addPDF">添加PDF文件</button>
+    							</div>
+    							<div class="fileAndDelete">
+        							<p class="fileName showFile" id="pdfFileB_name"></p>
+        							<button class="delete">删除</button>
+    							</div>
+							</div>
+							<div class="modal-footer">
+								<button type="submit" class="btn btn-primary add_button" id="B_flag_sure" data-dismiss="modal">
+									确定
+								</button>
+								<button type="button" class="btn btn-default delete" data-dismiss="modal">
+									取消
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+					</div>
+    				<div class="make_container" id="A">
+        				<button class="make" data-toggle="modal" data-target="#myModal_02">制作矩阵A</button>
+        				<img  class="flag_shadow hide"id="A_flag" src="../zjrt/images/flagWithShadow.png">
+    				</div>
+					<div class="add_system">
+						<!--添加矩阵-->
+						<div class="modal fade" id="myModal_02" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-body">
+										<p class="fileTitle">制作矩阵</p>
+										<div class="choiceFile">
+											<input type="file" class="uploadFile pdfFile" id="pdfFileA">
+											<button class="addPDF">添加PDF文件</button>
+										</div>
+										<div class="fileAndDelete">
+											<p class="fileName showFile" id="pdfFileA_name"></p>
+											<button class="delete">删除</button>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="submit" class="btn btn-primary add_button" id="A_flag_sure" data-dismiss="modal">
+											确定
+										</button>
+										<button type="button" class="btn btn-default delete" data-dismiss="modal">
+											取消
+										</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--
+				<div class="upload">
+    				<p class="fileTitle">制作矩阵</p>
+    				<div class="choiceFile">
+        				<input type="file" class="uploadFile" id="pdfFile">
+        				<button class="addPDF">添加PDF文件</button>
+    				</div>
+    				<div class="fileAndDelete">
+        				<p class="fileName" id="showFile"></p>
+        				<button class="delete" id="delete">删除</button>
+    				</div>
+    				<div class="buttons">
+        				<button class="finishedButton">确定</button>
+        				<button class="finishedButton">取消</button>
+    				</div>
+				</div>-->
+				<!--<div class="wrap">
+    				<div id="controller">
+        				<ul class="colorUl disappear">
+            				<li style="background: #ff0022" class="color_btn"></li>
+            				<li style="background: #ff0043" class="color_btn"></li>
+            				<li style="background: #ff0066" class="color_btn"></li>
+            				<li style="background: #ff0084" class="color_btn"></li>
+            				<li style="background: #ff009c" class="color_btn"></li>
+            				<li style="background: #ff00c0" class="color_btn"></li>
+            				<li style="background: #ff00cd" class="color_btn"></li>
+            				<li style="background: #fc00ff" class="color_btn"></li>
+            				<li style="background: #f600ff" class="color_btn"></li>
+            				<li style="background: #cc00ff" class="color_btn"></li>
+            				<li style="background: #ba00ff" class="color_btn"></li>
+            				<li style="background: #a800ff" class="color_btn"></li>
+            				<li style="background: #9000ff" class="color_btn"></li>
+            				<li style="background: #7200ff" class="color_btn"></li>
+            				<li style="background: #4e00ff" class="color_btn"></li>
+            				<li style="background: #3c00ff" class="color_btn"></li>
+            				<li style="background: #2400ff" class="color_btn"></li>
+            				<li style="background: #0000ff" class="color_btn"></li>
+            				<li style="background: #0042ff" class="color_btn"></li>
+            				<li style="background: #0060ff" class="color_btn"></li>
+            				<li style="background: #0096ff" class="color_btn"></li>
+            				<li style="background: #00c6ff" class="color_btn"></li>
+            				<li style="background: #00f6ff" class="color_btn"></li>
+            				<li style="background: #00ffd8" class="color_btn"></li>
+            				<li style="background: #00ffba" class="color_btn"></li>
+            				<li style="background: #00ff90" class="color_btn"></li>
+            				<li style="background: #00ff6c" class="color_btn"></li>
+            				<li style="background: #00ff42" class="color_btn"></li>
+            				<li style="background: #00ff18" class="color_btn"></li>
+            				<li style="background: #00ff00" class="color_btn"></li>
+            				<li style="background: #24ff00" class="color_btn"></li>
+            				<li style="background: #30ff00" class="color_btn"></li>
+            				<li style="background: #3cff00" class="color_btn"></li>
+            				<li style="background: #4eff00" class="color_btn"></li>
+            				<li style="background: #60ff00" class="color_btn"></li>
+            				<li style="background: #72ff00" class="color_btn"></li>
+            				<li style="background: #90ff00" class="color_btn"></li>
+            				<li style="background: #aeff00" class="color_btn"></li>
+            				<li style="background: #d2ff00" class="color_btn"></li>
+            				<li style="background: #f0ff00" class="color_btn"></li>
+            				<li style="background: #fff600" class="color_btn"></li>
+            				<li style="background: #ffd200" class="color_btn"></li>
+            				<li style="background: #ffc000" class="color_btn"></li>
+            				<li style="background: #ffa800" class="color_btn"></li>
+            				<li style="background: #ff9000" class="color_btn"></li>
+            				<li style="background: #ff7800" class="color_btn"></li>
+            				<li style="background: #ff4e00" class="color_btn"></li>
+            				<li style="background: #ff4200" class="color_btn"></li>
+            				<li style="background: #ff3c00" class="color_btn"></li>
+            				<li style="background: #ff2a00" class="color_btn"></li>
+            				<li style="background: #ff1e00" class="color_btn"></li>
+            				<li style="background: #ff1800" class="color_btn"></li>
+            				<li style="background: #ff0600" class="color_btn"></li>
+            				<li style="background: #ff0000" class="color_btn color_btn_selected"></li>
+        				</ul>
+        				<div class="colorNow" id="colorNow"></div>
+    					</div>
+    					<a href="#" class="closePic"><img src="images/close.png"></a>
+    					<div class="pencilAndEquipment">
+        				<div>
+        					<img src="images/viewPic.png" class="viewEquipmentPic">
+        					<span class="world">查看设备</span>
+        				</div>
+        				<div>
+        					<img src="images/pencil.png" class="pencilPic">
+        					<span class="world">涂鸦</span>
+        				</div>
+    				</div>
+				</div>-->
+		</div>
+	</div>
+</body>
+<script src="../zjrt/js/jquery-3.2.1.min.js" ></script><script src="../zjrt/js/bootstrap.min.js"></script>
+<script src="../zjrt/interface/interface_manager_jiqunguanli.js"></script>
+<script src="../zjrt/js/JS_ClusterShowing.js"></script>
+<!--<script src="js/JS_Painting.js"></script>-->
+
+</html>

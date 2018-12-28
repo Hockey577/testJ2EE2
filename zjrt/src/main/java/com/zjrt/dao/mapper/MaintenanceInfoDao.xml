@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjrt.dao.MaintenanceInfoDao">
+    <insert id="createMaintain">
+        INSERT INTO maintain
+        (title,devicename,addtime,username,description,solution,type,photo1,photo2)
+        VALUES
+        (#{title},#{devicename},#{addtime},#{username},#{description},
+        #{solution},#{type},#{photo1},#{photo2})
+    </insert>
+    <update id="updateMaintain">
+        UPDATE maintain
+        SET title = #{title}, devicename = #{devicename} ,
+        addtime=#{addtime},username = #{username},
+        description = #{description},solution = #{solution},type= #{type},
+        photo1 = #{photo1},photo2 = #{photo2}
+        WHERE maintainid = #{maintainid}
+    </update>
+    <update id="updateMaintainNew">
+        UPDATE maintain
+        SET title = #{title}, devicename = #{devicename} ,
+        addtime=#{addtime},username = #{username},
+        description = #{description},solution = #{solution},type= #{type}
+        WHERE maintainid = #{maintainid}
+    </update>
+    <update id="updateMaintainNew1">
+        UPDATE maintain
+        SET title = #{title}, devicename = #{devicename} ,
+        addtime=#{addtime},username = #{username},
+        description = #{description},solution = #{solution},type= #{type},photo1 = #{photo1}
+        WHERE maintainid = #{maintainid}
+    </update>
+    <update id="updateMaintainNew2">
+        UPDATE maintain
+        SET title = #{title}, devicename = #{devicename} ,
+        addtime=#{addtime},username = #{username},
+        description = #{description},solution = #{solution},type=#{type},photo2 = #{photo2}
+        WHERE maintainid = #{maintainid}
+    </update>
+    <delete id="deleteMaintain" parameterType="java.lang.Long">
+        DELETE FROM maintain WHERE maintainid = #{maintainid}
+    </delete>
+    <select id="queryALL" resultType="com.zjrt.entity.MaintainEntity">
+        SELECT * FROM maintain limit #{startRow},#{pageSize}
+    </select>
+    <select id="queryById" resultType="com.zjrt.entity.MaintainEntity">
+        SELECT * FROM  maintain
+        WHERE maintainid = #{maintainid}
+    </select>
+    <update id="setTop">
+        UPDATE maintain
+        SET type = 1
+        WHERE maintainid= #{maintainid}
+    </update>
+    <update id="undoTop">
+        UPDATE maintain
+        SET type = 0
+        WHERE maintainid= #{maintainid}
+    </update>
+    <select id="queryByName" resultType="com.zjrt.entity.MaintainEntity">
+        SELECT * FROM maintain
+        WHERE devicename LIKE  '%${devicename}%'
+    </select>
+
+    <select id="countId" resultType="com.zjrt.dao.NumberVO">
+        SELECT COUNT(*) AS number FROM maintain
+    </select>
+</mapper>

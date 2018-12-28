@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zjrt.dao.UserInfoDao">
+
+    <insert id="addUser">
+        INSERT INTO userInfo(username,password,type,phonenum)
+        VALUES (#{username},#{password},#{type},#{phonenum});
+    </insert>
+
+    <insert id="addUserByPhone">
+        INSERT INTO userInfo(phonenum,code)
+        VALUES (#{phonenum},#{code})
+    </insert>
+
+    <select id="checklogin" resultType="com.zjrt.entity.UserInfoEntity">
+        SELECT * FROM userInfo
+        WHERE username = #{username}
+    </select>
+
+    <update id="modifyPwd">
+        UPDATE userInfo
+        SET password = #{password}
+        WHERE username = #{username}
+    </update>
+
+    <select id="queryByPhone" resultType="com.zjrt.entity.UserInfoEntity">
+        SELECT * FROM userInfo
+        WHERE  phonenum = #{phonenum}
+    </select>
+    <select id="queryByName" resultType="com.zjrt.entity.UserInfoEntity">
+        SELECT * FROM userInfo
+        WHERE username = #{username}
+    </select>
+
+
+</mapper>

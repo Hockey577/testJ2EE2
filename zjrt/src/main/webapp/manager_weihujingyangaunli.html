@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="multipart/form-data; charset=utf-8" />
+	<title>维护经验管理</title>
+</head>
+	<link href="../zjrt/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="../zjrt/css/container.css" rel="stylesheet" >
+	<link rel="stylesheet" type="text/css" href="../zjrt/css/file_menage.css"/>
+<body>
+	<nav class="navbar nav-pills">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="manager_shouye.html">
+					<div class="logo_image">
+						<img class="logo_one" src="../zjrt/images/logo.png"/>
+						<img class="logo_two" src="../zjrt/images/logo－RTG.png"/>
+					</div>
+				</a>
+			</div>
+			<div class="container_list">
+				<ul class="nav navbar-nav sections">
+					<li class="content"><a href="manager_shouye.html"><p>首页</p></a></li>
+					<li class="content"><a href="manager_jiqunguanli.html"><p>集群展示</p></a></li>
+					<li class="content"><a class="current" href="manager_tupianguanli.html"><p>后台管理</p></a></li>
+				</ul>
+				<ul class="nav navbar-nav unload">
+					<li class="content"><a href="denglu.html"><p>退出登录</p></a></li>
+					<li><a href="javascript:;"><img src="../zjrt/images/管理员.png"/></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="manager_main_page">
+		<nav class="navbar" style="z-index: 0">
+			<div class="navbar navbar-vertal">
+				<ul class="nav">
+					<li>
+						<a href="manager_tupianguanli.html">
+						<p>首页图片管理</p>
+						<div class="bg_right_arrow">
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="manager_jiqunguanli.html">
+						<p>演播厅集群管理</p>
+						<div class="bg_right_arrow">
+						</div>
+						</a>
+					</li>
+					<li>
+						<a href="manager_shebeiwendangguanli.html">
+							<p>设备文档管理</p>
+						</a>
+					</li>
+					<li class="current_content_active">
+						<a href="manager_weihujingyangaunli.html">
+							<p>维护经验管理</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<div class="manager_main_work">
+			<form>
+				<div class="input_self_group">
+					<div class="input-group">
+						<input type="text" id="searchCon" class="form-control" placeholder=""/>
+						<a href="#"><span class="input-group-addon" onclick="searchMatain()"></span></a>
+					</div>
+				</div>
+			</form>
+			<div class="mechine_list" >
+				<ul id="mechine_list_ul">
+
+				</ul>
+				<div class="page">
+					<div class="page_search">
+						<span id="page_now" class="page_now">1</span>
+						<span>/</span>
+						<span class="page_all" id="page_all">5</span>
+						<span>页</span>
+					</div>
+					<ul class="pager">
+    					<li id="prePage"><a href="#">上一页</a></li>
+    					<li id="nextPage"><a href="#">下一页</a></li>
+  					</ul>
+  					<div class="add_button">
+						<button id="addMaintenance" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">添加</button>
+			 		</div>
+			 		<!--添加经验-->
+			 		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-body">
+									<form action="" method="post" ENCTYPE="multipart/form-data" id="uploadForm">
+										<div class="input-groups">
+											<p>标题</p>
+											<input type="text" value="" id="title"/>
+										</div>
+										<div class="input-groups">
+											<p>维护人</p>
+											<input type="text" value="" id="username"/>
+										</div>
+										<div class="input-groups">
+											<p>设备名称</p>
+											<input type="text" value="" id="devicename"/>
+										</div>
+										<div class="input-groups texta">
+											<p>问题描述</p>
+											<textarea name="" rows="" cols="" id="description"></textarea>
+											<div class="pic_up">
+												<label class="ui_button ui_button_primary" for="xFile">
+													<img src="../zjrt/images/上传图片.png"/>
+													<p>上传图片</p>
+												</label>
+												<input type="file" id="xFile"accept="image/png, image/jpeg, image/gif, image/jpg" onchange="showImg(this)">
+											</div>
+										</div>
+										<div class="input-groups texta">
+											<p>解决方法</p>
+											<textarea name="" rows="" cols="" id="solution"></textarea>
+											<div class="pic_up">
+												<label class="ui_button ui_button_primary" for="xFile2">
+													<img src="../zjrt/images/上传图片.png"/>
+													<p>上传图片</p>
+												</label>
+												<input type="file" id="xFile2"accept="image/png, image/jpeg, image/gif, image/jpg" onchange="showImg(this)">
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+									</button>-->
+									<button type="submit" class="btn btn-primary" data-dismiss="modal"  onclick="addData()">
+										上传
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--修改经验-->
+					<div class="modal fade" id="myModal01" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-body">
+									<form action="" method="post">
+										<div class="input-groups">
+											<p>标题</p>
+											<input type="text" value="" id="modifyTitle"/>
+										</div>
+										<div class="input-groups">
+											<p>维护人</p>
+											<input type="text" value="" id="modifyUsername"/>
+										</div>
+										<div class="input-groups">
+											<p>设备名称</p>
+											<input type="text" value="" id="modifyDevicename"/>
+										</div>
+										<div class="input-groups texta">
+											<p>问题描述</p>
+											<textarea name="" rows="" cols="" id="modifyDescription"></textarea>
+											<div class="pic_up">
+												<label class="ui_button ui_button_primary" for="modifyxFile">
+													<img src="../zjrt/images/上传图片.png"/>
+													<p>上传图片</p>
+												</label>
+												<input type="file" id="modifyxFile"accept="image/png, image/jpeg, image/gif, image/jpg">
+											</div>
+										</div>
+										<div class="input-groups texta">
+											<p>解决方法</p>
+											<textarea name="" rows="" cols="" id="modifySolution"></textarea>
+											<div class="pic_up">
+												<label class="ui_button ui_button_primary" for="modifyxFile2">
+													<img src="../zjrt/images/上传图片.png"/>
+													<p>上传图片</p>
+												</label>
+												<input type="file" id="modifyxFile2"accept="image/png, image/jpeg, image/gif, image/jpg">
+											</div>
+										</div>
+									</form>
+								</div>
+								<div class="modal-footer">
+									<!--<button type="button" class="btn btn-default" data-dismiss="modal">关闭
+									</button>-->
+									<button type="submit" class="btn btn-primary" id="modifyButton" data-dismiss="modal">
+										修改
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>  
+			</div>
+		</div>
+	</div>
+
+</body>
+<script src="../zjrt/js/jquery-3.2.1.min.js" ></script>
+<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="../zjrt/js/JS_ClusterShowing.js"></script>
+<script src="../zjrt/js/MaintainManage.js"></script>
+</html>

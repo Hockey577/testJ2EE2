@@ -1,0 +1,472 @@
+.container-fluid{
+	background: rgba(53,64,83,1);
+}
+nav{
+	margin: 0;
+}
+.main_page{
+	margin: 0 auto;
+	width: 84.3%;
+	height: 1080px;
+	min-height: 100%;
+	position: relative;
+	top: 0;
+	bottom: 0;
+}
+.main_page form{
+	width: 100%;
+	height: 6%;
+	position: absolute;
+	left: 0;
+	top: 2%;
+}
+/*查询输入框*/
+.input_self_group{
+	color: rgb(84,84,84);
+	font-size: 22px;
+	width: 33%;
+	height: 100%;
+}
+/*固定三个输入框位置*/
+.input_one{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.input_two{
+	position: absolute;
+	left: 34%;
+	top: 0;
+}
+.input_three{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+/*输入框标签名*/
+.input_self_group p{
+
+	padding:  2% 0.2rem 0 0;
+	float: left;
+}
+/*输入框多选框*/
+.input_self_group select option{
+	text-align: center;
+	 border: none;
+    outline: none;
+    padding-left: 200px;
+    color:#6d6d6d;
+    -moz-appearance: none;
+    -webkit-appearance: none; 
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);   /* 点击去除高亮的颜色*/
+}
+
+/*下拉输入框*/
+.input_self_group .selector{
+	border: 1px solid rgb(204,204,204);
+	border-radius: 4px;
+	width: 58.2%;
+	position: absolute;
+	left: 16%;
+	top: 0;
+	background: rgb(255,255,255);
+	z-index: 1;
+}
+.input_self_group .selector_two{
+	position: absolute;
+	left: 22%;
+}
+/*设定下拉框的箭头样式*/
+.input_self_group select{
+	border: 1px solid rgb(204,204,204);
+	border-radius: 4px;
+	width: 100%;
+	padding: 2%;
+    /*很关键：将默认的select选择框样式清除*/
+    appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    /*在选择框的最右侧中间显示下拉箭头图片*/
+    background: url(../images/下箭头.png)  right center no-repeat;
+	background-size: 2rem;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+   padding-right:10px;
+}
+.input_self_group select::-ms-expand { display: none; }
+/*搜索框*/
+.form-control{
+	border: 2px solid rgb(204,204,204);
+	border-radius: 3px;
+	width: 58.2%;
+	height: 66%;
+	min-height: 66%;
+	position: absolute;
+	right: 25%;
+}
+.input-group{
+	height: 100%;
+	min-height: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 0;
+}
+/*输入框*/
+.input-group input{
+	background: rgb(181,210,226);
+	border: 2px solid rgb(181,210,226);
+	border-radius: 3px;
+	position: relative;
+	top: 0;
+	height: 60%;
+}
+/*搜索按钮*/
+.input-group-addon{
+	position: absolute;
+	right: 0;
+	width: 24.8%;
+	height: 66%;
+	background: rgb(66,160,214);
+	background-image: url(../images/sousuo.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 40%;
+	border: 1px solid rgb(66,160,214);
+}
+/*设备文档列表*/
+.mechine_list{
+	width: 100%;
+	position: relative;
+	min-height: 80%;
+	height: 80%;
+	top: 10%;
+	font-size: 23px;
+	text-align: center;
+	border: 1px solid rgb(204,204,204);
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+}
+.mechine_list ul{
+	height: 100%;
+	min-height: 100%;
+}
+.mechine_list ul li{
+	border: 1px solid rgb(204,204,204);
+	border-right-width: 2px;
+	border-left-width: 2px;
+	list-style-type: none;
+	width: 100%;
+	height: 6.6%;
+	min-height: 6.6%;
+	border-radius: 5px;
+	background: rgb(255,255,255);
+}
+.mechine_list ul li a{
+	text-decoration: none;
+	color: rgb(1,125,199);
+}
+.mechine_list .list_content{
+	width: 25%;
+	height: 100%;
+	padding: 1%;
+	float: left;
+}
+/*弹出层添加文件*/
+.machine_position_file{
+	border: 2px solid rgb(204,204,204);
+	border-radius: 5px;
+	width: 60%;
+	height: 70%;
+	position: absolute;
+	top: 14%;
+	left: 20%;
+}
+/*页码查询*/
+.page{
+	position: absolute;
+	right: 0;
+	height: 5%;
+	width: 52.2%;
+	color: rgb(85,85,85);
+}
+.page input{
+	width: 14.4%;
+	height: 100%;
+	border: 2px solid rgb(204,204,204);
+	border-radius: 5px;
+	position: absolute;
+	left: 10%;
+}
+.page_search{
+	width: 30.3%;
+	height: 100%;
+	position: absolute;
+	left: 28%;
+	padding-top: 1%;
+}
+.page_search span{
+	height: 80%;
+	width: 15%;
+	margin: 0;
+	float: left;
+}
+/*上下页*/
+.pager{
+	position: absolute;
+	left: 50%;
+	margin: 0;
+}
+.pager li a{
+	background: rgb(231,231,231);
+	border: 1px solid rgb(231,231,231);
+	border-radius: 0;
+}
+.pager li a:hover{
+	background: rgb(231,231,231);
+}
+.page ul li{
+	border-left: 3px solid rgb(231,231,231);
+	border-right: 3px solid rgb(231,231,231);
+	border-radius: 0;
+}
+/*附加：管理员端添加按钮*/
+/**解决火狐的兼容性**/
+@-moz-document url-prefix(){
+	.input-group-addon{
+		height: 38px;
+	}
+}
+.nav-pills{
+	border: none;
+}
+
+/***********下拉框************/
+body,p,ul {
+	margin: 0;
+	padding: 0;
+}
+body {
+
+	color: #333;
+}
+.content {
+	float: left;
+}
+.content .select {
+	width:200px;
+	height: 40px;
+	margin: 0 auto;
+	font-size: 16px;
+	background-color: #fff;
+	position: relative;
+	border: solid 2px #ccc;
+	border-radius: 4px;
+}
+/*transform(缩放、旋转、平移)，显示的是最终效果，没有动画过程*/
+/*transition是对元素本身的属性(比如：width、height)设置动画效果*/
+.content .select:after {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-left: 1px #4c4c4c solid;
+	border-bottom: 1px #4c4c4c solid;
+	position: absolute;
+	top: 11px;
+	right: 12px;
+	transform: rotate(-45deg);
+
+}
+.content .select p {
+	padding: 0 15px;
+	line-height: 40px;
+	cursor: pointer;
+}
+/*设置下拉框收起时的高度过渡动画*/
+.content .select ul {
+	list-style-type: none;
+	background-color: #fff;
+	width:100%;
+	overflow-y: auto;
+	position: absolute;
+	top: 40px;
+	left: 0;
+	max-height: 0;
+	opacity: 0;
+
+	transition: max-height .5s ease-out;
+	border: solid 2px #ccc;
+	border-radius: 4px;
+	z-index: 1;
+
+}
+
+.content .select ul li {
+	padding: 0 15px;
+	line-height: 25px;
+	cursor: pointer;
+	font-size: 0.2rem;
+}
+.content .select ul li:hover {
+	background-color: #e0e0e0;
+}
+.content .select ul li.selected {
+	background-color: #39f;
+	color: #fff;
+}
+/*下拉框展开时调用动画slide-down*/
+/*transform-origin设置缩放下拉框的基点位置*/
+.content .select.open ul {
+	max-height: 250px;
+	-webkit-animation: slide-down .5s ease-in;
+	transition: max-height .3s ease-in;
+	transform-origin: 50% 0;
+	opacity: 1;
+}
+/*设置展开时下拉箭头的旋转动画*/
+.content .select.open:after {
+	transform: rotate(-225deg);
+	top: 18px;
+	transition: all .3s ease-in;
+	opacity: 1;
+}
+/*为下拉框展开时添加名称为slide-down的关键帧动画*/
+@-webkit-keyframes slide-down{
+	 0%{transform: scale(1,0);}
+	 100%{transform: scale(1,1);}
+ }
+
+@-webkit-keyframes slide-up{
+	0%{transform: scale(1,1);}
+	100%{transform: scale(1,0);}
+}
+.addPic{
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+}
+.description_button,.sure{
+	position: absolute;
+	width: 10%;
+	height: 3.5%;
+	background-color: #42a0d6;
+	border: none;
+}
+.sure{
+	left:90% ;
+	top:49%;
+}
+.description_button
+{
+	left: 42.5%;
+	top: 32%;
+}
+.uploadFile{
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 2;
+	opacity: 0;
+}
+.pic_showImg{
+	width: 80%;
+
+}
+/******28号之后的代码*******/
+.content_two .select{
+
+}
+.content_two .select p{
+	width: 20%;
+}
+.input_self_group_two{
+	width: 100%;
+}
+.choice_system{
+	color:#dc982c !important;
+}
+.select{
+	position: relative;
+}
+.colony_select{
+	position: absolute !important;
+	left: 20% !important;
+}
+.colony_p{
+	text-align: center !important;
+}
+.select_input{
+	display: flex;
+	justify-content: space-between;
+	width: 115%;
+}
+.colony_ul{
+	height: auto !important;
+}
+.colony_ul li{
+	border: none !important;
+	height: 100% !important;
+}
+
+/*上传图片*/
+.modal-body form .input-groups .pic_up input{
+	position: absolute;
+	top: 0;
+	clip: rect(0,0,0,0);
+}
+.modal-body form .input-groups .pic_up label{
+	position: absolute;
+	border: 2px solid rgb(219,219,219);
+	width: 12%;
+	height: 75%;
+	border-radius: 5px;
+	top: 5%;
+	left: 75%;
+	background: rgb(247,247,247);
+}
+.modal-body form .input-groups .pic_up label img{
+	position: absolute;
+	height: 55%;
+	width: 70%;
+	top: 8%;
+	left: 15%;
+}
+.modal-body form .input-groups .pic_up label p{
+	position: absolute;
+	top: 70%;
+	width: 100%;
+	font-size: 13px;
+	text-align: center;
+}
+.modal-body form .input-groups .pic_up label:hover{
+	cursor: pointer;
+}
+/*上传按钮*/
+.modal-footer{
+	width: 100%;
+	border: 1px solid rgb(255,255,255);
+	position: absolute;
+	bottom: 2%;
+	height: 10%;
+}
+.modal-footer button{
+	position: absolute;
+}
+.modal-footer .btn-default{
+	width: 15%;
+	height: 90%;
+	left: 70%;
+	top: 0;
+}
+.modal-footer .btn-primary{
+	top: 0;
+	left: 42%;
+	width: 15%;
+	height: 90%;
+	border: 1px solid rgb(66,160,214);
+	background: rgb(66,160,214);
+}
+
+

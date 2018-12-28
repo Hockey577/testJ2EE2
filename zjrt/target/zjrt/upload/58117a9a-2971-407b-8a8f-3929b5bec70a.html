@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>北京天气预报</title>
+    <style type="text/css">
+        #wiredAll {
+            margin: 20px auto;
+        }
+
+        ul {
+            width: 200px;
+            padding: 20px;
+            border: 2px solid lightpink;
+
+            margin-left: 10px;
+            display: inline-block;
+        }
+
+        ul li {
+            list-style: none;
+
+        }
+
+        .liTitle {
+            display: inline-block;
+            width: 50px;
+        }
+
+    </style>
+
+    <script type="text/javascript" src="jquery-3.2.1.js"></script>
+    <script type="text/javascript"
+            src="http://api.map.baidu.com/getscript?v=2.0&ak=NaKjlj5yy87yG2tl1GqXjGvUOVoYumxx"></script>
+    <script type="text/javascript">
+        $(function () {
+            var cityName;
+            $('#getWeather').click(function (localCity) {
+                $.ajax({
+                    type: 'post',
+                    dataType: 'jsonp',
+                    url: 'https://api.asilu.com/weather/',
+                    data: {
+                        city: '北京',
+                    },
+                    success: function (data) {
+                        console.log('成功：' + data.city);
+                        console.log('更新时间：' + data.date);
+                        console.log(data.weather.length);
+
+                        //显示当前城市
+                        $('#wiredAll').append('<div>当前城市：' + '北京市' + '</div>');
+
+                        //往html添加数据
+                        for (var i = 0; i < data.weather.length; i++) {
+                            //存储数据
+                            var $ul = $('<ul></ul>');
+                            var $li_pm25 = $('<li><span class="liTitle">PM2.5:</span><text>' + data.pm25 + '</text></li>');
+                            var $li_data = $('<li><span class="liTitle">日  期:</span><text>' + data.weather[i].date + '</text></li>');
+                            var $li_weather = $('<li><span class="liTitle">天  气:</span><text>' + data.weather[i].weather + '</text></li>')
+                            var $li_wind = $('<li><span class="liTitle">风  向:</span>' + '<text>' + data.weather[i].wind + '</text></li>');
+                            var $li_temp = $('<li><span class="liTitle">温  度:</span>' + '<text>' + data.weather[i].temp + '</text></li>');
+                            $('#contentList').append($ul);
+                            var $appendLi = $('#contentList ul:eq(i)');
+
+                            $ul.append($li_pm25);
+                            $ul.append($li_data);
+                            $ul.append($li_weather);
+                            $ul.append($li_wind);
+                            $ul.append($li_temp);
+                        }
+                    },
+                    error: function (XmlHttpRequest, textStatus, errorThrown) {
+                        alert("天气调取失败!\n");
+                    }
+                })
+            })
+        })
+
+    </script>
+</head>
+<body bgcolor="#fff2df" >
+
+
+<div align="center">
+<button id="getWeather" >获取北京天气</button>
+
+<div id="wiredAll" >
+
+    <div id="contentList"></div>
+
+</div>
+</div>
+</body>
+
+</html>

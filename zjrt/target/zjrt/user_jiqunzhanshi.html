@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>集群展示</title>
+</head>
+	<link href="../zjrt/css/bootstrap.min.css" rel="stylesheet" >
+	<link href="../zjrt/css/container.css" rel="stylesheet" >
+	<link href="../zjrt/css/style_ClusterShowing.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../zjrt/css/style_Painting.css"/>
+	<style>
+		.pdf_show{
+			position: absolute;
+			left: 16.3%;
+			top:67px;
+			width: 83.7%;
+			height: 100%;
+			z-index:1;
+			opacity: 1;
+		}
+		.wrap{
+			z-index: 2;
+			width: 100% !important;
+		}
+		.system_show{
+			top:0;
+			display: inherit;
+		}
+		.dispaly_none{
+			display: none !important;
+		}
+		#subSystem_path{
+			display: none;
+		}
+		.remind{
+			position: absolute;
+			left: 84%;
+			top: 13%;
+			padding: 0.2rem 0 0.2rem 0;
+			width:15%;
+			height: auto;
+			text-align: center;
+			border-radius: 0.05rem;
+			background-color: #ffffff;
+			box-shadow:0.05rem  0.05rem 0.1rem rgba(170,170,170,0.5);
+			font-size:0.25rem;
+			color: rgb(1,125,199);
+		}
+		.worlds_inRemind{
+			position: absolute;
+			left: 0.8rem;
+			font-size: 0.22rem;
+			color: #333;
+		}
+		.remind>div{
+			position: relative;
+			padding: 0.05rem 0 0 0;
+			height: 0.5rem;
+		}
+		.pencilPic{
+
+			margin: 0 0 0 0.2rem;
+			float: left;
+		}
+		.line{
+			padding: 0 0 0 0 !important;
+			margin: 0 5% 0 5%;
+			height: 0 !important;
+			border: solid 1px #a0cfea;
+		}
+		#controller{
+			position: absolute;
+			top: -110px;
+			left: 1.5rem;
+            height: 120px;
+		}
+        .disappear{
+            height: 0 !important;
+            opacity: 1 !important;
+        }
+        #colorNow{
+            position: absolute;
+            top: 110px;
+        }
+        .documentAndLocation{
+            height: 0 !important;
+            /*height: calc(1rem + 2px) !important;*/
+            transition:height 1s;
+            -moz-transition:height 1s; /* Firefox 4 */
+            -webkit-transition:height 1s; /* Safari and Chrome */
+            -o-transition:height 1s;
+        }
+        .show_documentAndLocation:hover + .documentAndLocation{
+            height: calc(1rem + 2px) !important;
+        }
+        .documentAndLocation:hover
+        {
+            height: calc(1rem + 2px) !important;
+        }
+        .documentAndLocation>div{
+            position: relative;
+            padding: 0.05rem 0 0 0;
+            opacity: 0;
+            height: 0;
+            transition:all 1s;
+            -moz-transition:all 1s; /* Firefox 4 */
+            -webkit-transition:all 1s; /* Safari and Chrome */
+            -o-transition:all 1s;
+        }
+        .show_documentAndLocation:hover + .documentAndLocation>div{
+            opacity: 1;
+            height: 0.5rem;
+        }
+        .documentAndLocation:hover>div{
+            opacity: 1;
+            height: 0.5rem;
+        }
+	</style>
+
+<body>
+	<nav class="navbar nav-pills">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="user_shouye.html">
+					<div class="logo_image">
+						<img class="logo_one" src="../zjrt/images/logo.png"/>
+						<img class="logo_two" src="../zjrt/images/logo－RTG.png"/>
+					</div>
+				</a>
+			</div>
+			<div class="container_list">
+				<ul class="nav navbar-nav sections">
+					<li class="content"><a href="user_shouye.html"><p>首页</p></a></li>
+					<li class="content"><a class="current" href="user_jiqunzhanshi.html"><p>集群展示</p></a></li>
+				</ul>
+				<ul class="nav navbar-nav unload">
+					<li class="content"><a href="denglu.html"><p>退出登录</p></a></li>
+					<li><a href="#"><img src="../zjrt/images/yonghu.png"/></a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<div class="manager_main_page">
+		<div class="navbar navbar-vertal">
+			<ul class="nav " id="subSystem_nav">
+				<li class="input_search">
+					<div class="input-lg">
+					<form action="" method="post">
+						<div class="input-group">
+							<span class="input-group-addon"><a href="#" target="_blank"><img src="../zjrt/images/sousuo.png"/></a></span>
+							<input type="text" class="form-control" placeholder="请输入关键字">
+						</div>
+					</form>
+					</div>
+				</li>
+				<!--<li>
+					<a href="#">
+					<p>1200监看结构图</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p>2500监看结构图</p>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<p>分控监看结构图</p>
+					</a>
+				</li>-->
+			</ul>
+		</div>
+		<!--集群系统html-->
+		<p id="subSystem_path"></p>
+		<!--1_clusterSytem/1_clusterSystem.html-->
+		<iframe id="clusterSystem_iframe" src="tupian1.html" class="pdf_show system_show "></iframe><!--1_clusterSytem/1_clusterSystem.html-->
+		<div class="manager_main_work">
+			<!--<div class="bgPic">
+   				 	<img src="images/ClusterShowing.jpg">
+			</div>
+			<!--<iframe class="bgPic" src="pdf.js_demon/build/generic/web/viewer.html"></iframe>-->
+				<!--<div class="remind">
+    				<div class="remindTop"><p class="remindLine">制作矩阵A</p></div>
+   	 				<div class="remindFlag"><p>制作矩阵B</p></div>
+				</div>
+				<div class="MakeMatrix">
+    				<div class="make_container" id="B">
+        				<button class="make">制作矩阵B</button>
+        				<img  class="flag_shadow hide" src="images/flagWithShadow.png">
+    				</div>
+    				<div class="make_container" id="A">
+        				<button class="make">制作矩阵A</button>
+        				<img  class="flag_shadow hide" src="images/flagWithShadow.png">
+    				</div>
+				</div>-->
+
+				<!--<div class="upload">
+    				<p class="fileTitle">制作矩阵</p>
+    				<div class="choiceFile">
+        				<input type="file" class="uploadFile" id="pdfFile">
+        				<button class="addPDF">添加PDF文件</button>
+    				</div>
+    				<div class="fileAndDelete">
+        				<p class="fileName" id="showFile"></p>
+        				<button class="delete" id="delete">删除</button>
+    				</div>
+    				<div class="buttons">
+        				<button class="finishedButton">确定</button>
+        				<button class="finishedButton">取消</button>
+    				</div>
+				</div>-->
+			<div class="wrap dispaly_none">
+				<a id="backTo_sysytem" href="#" class="closePic"><img src="../zjrt/images/close.png"></a>
+				<div class="remind">
+					<div id="startPaint"><img src="../zjrt/images/pencil.png" class="pencilPic"><p class="worlds_inRemind">涂鸦</p>
+                            <div id="controller">
+                                <ul class="colorUl disappear">
+                                    <li style="background: #ff0022" class="color_btn"></li>
+                                    <li style="background: #ff0043" class="color_btn"></li>
+                                    <li style="background: #ff0066" class="color_btn"></li>
+                                    <li style="background: #ff0084" class="color_btn"></li>
+                                    <li style="background: #ff009c" class="color_btn"></li>
+                                    <li style="background: #ff00c0" class="color_btn"></li>
+                                    <li style="background: #ff00cd" class="color_btn"></li>
+                                    <li style="background: #fc00ff" class="color_btn"></li>
+                                    <li style="background: #f600ff" class="color_btn"></li>
+                                    <li style="background: #cc00ff" class="color_btn"></li>
+                                    <li style="background: #ba00ff" class="color_btn"></li>
+                                    <li style="background: #a800ff" class="color_btn"></li>
+                                    <li style="background: #9000ff" class="color_btn"></li>
+                                    <li style="background: #7200ff" class="color_btn"></li>
+                                    <li style="background: #4e00ff" class="color_btn"></li>
+                                    <li style="background: #3c00ff" class="color_btn"></li>
+                                    <li style="background: #2400ff" class="color_btn"></li>
+                                    <li style="background: #0000ff" class="color_btn"></li>
+                                    <li style="background: #0042ff" class="color_btn"></li>
+                                    <li style="background: #0060ff" class="color_btn"></li>
+                                    <li style="background: #0096ff" class="color_btn"></li>
+                                    <li style="background: #00c6ff" class="color_btn"></li>
+                                    <li style="background: #00f6ff" class="color_btn"></li>
+                                    <li style="background: #00ffd8" class="color_btn"></li>
+                                    <li style="background: #00ffba" class="color_btn"></li>
+                                    <li style="background: #00ff90" class="color_btn"></li>
+                                    <li style="background: #00ff6c" class="color_btn"></li>
+                                    <li style="background: #00ff42" class="color_btn"></li>
+                                    <li style="background: #00ff18" class="color_btn"></li>
+                                    <li style="background: #00ff00" class="color_btn"></li>
+                                    <li style="background: #24ff00" class="color_btn"></li>
+                                    <li style="background: #30ff00" class="color_btn"></li>
+                                    <li style="background: #3cff00" class="color_btn"></li>
+                                    <li style="background: #4eff00" class="color_btn"></li>
+                                    <li style="background: #60ff00" class="color_btn"></li>
+                                    <li style="background: #72ff00" class="color_btn"></li>
+                                    <li style="background: #90ff00" class="color_btn"></li>
+                                    <li style="background: #aeff00" class="color_btn"></li>
+                                    <li style="background: #d2ff00" class="color_btn"></li>
+                                    <li style="background: #f0ff00" class="color_btn"></li>
+                                    <li style="background: #fff600" class="color_btn"></li>
+                                    <li style="background: #ffd200" class="color_btn"></li>
+                                    <li style="background: #ffc000" class="color_btn"></li>
+                                    <li style="background: #ffa800" class="color_btn"></li>
+                                    <li style="background: #ff9000" class="color_btn"></li>
+                                    <li style="background: #ff7800" class="color_btn"></li>
+                                    <li style="background: #ff4e00" class="color_btn"></li>
+                                    <li style="background: #ff4200" class="color_btn"></li>
+                                    <li style="background: #ff3c00" class="color_btn"></li>
+                                    <li style="background: #ff2a00" class="color_btn"></li>
+                                    <li style="background: #ff1e00" class="color_btn"></li>
+                                    <li style="background: #ff1800" class="color_btn"></li>
+                                    <li style="background: #ff0600" class="color_btn"></li>
+                                    <li style="background: #ff0000" class="color_btn color_btn_selected"></li>
+                                </ul>
+                            <div class="colorNow" id="colorNow"></div>
+                        </div>
+                    </div>
+					<div class="line"></div>
+					<div id="starWipe"><img src="images/eraser.png" class="pencilPic"><p class="worlds_inRemind">橡皮擦</p></div>
+					<div class="line"></div>
+					<div><img src="images/magnifier.png" class="pencilPic"><p class="worlds_inRemind">缩放</p></div>
+					<div class="line"></div>
+					<div class="show_documentAndLocation"><img src="../zjrt/images/viewPic.png" class="pencilPic"><p class="worlds_inRemind">查看设备</p></div>
+                    <div class="documentAndLocation">
+                        <div class="line"></div>
+                        <div><p class="worlds_inRemind">设备文档</p></div>
+                        <div class="line"></div>
+                        <div><p class="worlds_inRemind">设备位置</p></div>
+                    </div>
+
+				</div>
+			</div>
+		</div>
+		<!---->
+		<!--<iframe id="pdfJS_iframe" class="pdf_show" src="generic/web/viewer.html" scrolling="no">
+		</iframe>-->
+	</div>
+
+</body>
+<script src="../zjrt/js/jquery-3.2.1.min.js" ></script><script src="../zjrt/js/bootstrap.min.js"></script>
+<script src="../zjrt/js/eraser_painting.js"></script>
+<script src="../zjrt/js/JS_ClusterShowing.js"></script>
+<script src="../zjrt/interface/interface_user_jiqunguanli.js"></script>
+</html>
